@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image "telverneck/note-wd"
+            image "telverneck/node-wd"
         }
     }
     stages {
