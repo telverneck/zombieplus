@@ -8,7 +8,6 @@ pipeline {
         stage("Build"){
             steps{
                 sh "npm install"
-                sh "docker login"
             }
         }
          stage("Tests"){
