@@ -49,7 +49,7 @@ module.exports = {
         // waitForElementVisible procura o elemento visivel na pagina, mas tb procura pelo Atributo Display
         // waitForElementPresent verifica se esta em algum lugar da pagina
         movie
-            .waitForElementPresent('@tableMovies', 5000)
+            .waitForElementPresent('@tableMovies', 10000)
             .assert.containsText('@tableMovies', movieData.title)
 
     },
@@ -57,12 +57,12 @@ module.exports = {
         let movie = browser.page.movie()
 
         movie
-            .waitForElementVisible('@deleteButton', 5000)
+            .waitForElementVisible('@deleteButton', 10000)
             .click('@deleteButton')
-            .waitForElementVisible('@confirmDeleteButton', 7000)
+            .waitForElementVisible('@confirmDeleteButton', 10000)
             .click('@confirmDeleteButton')
             .pause(2000)
-            .waitForElementVisible('@alertDanger', 7000)
+            .waitForElementVisible('@alertDanger', 10000)
             .assert.containsText('@alertDanger', 'Puxa! não encontramos nada aqui :(')
 
     }

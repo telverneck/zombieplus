@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image "telmocorrea/node-wd"
+            args "--network=skynet"
         }
     }
     stages {
